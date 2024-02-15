@@ -1,10 +1,12 @@
+import { Canvas } from "@react-three/fiber"
 import "./App.css"
+import { ThreeElement } from "./ThreeElement"
 
 function App() {
 	return (
-		<>
-			<p>hello world</p>
-		</>
+		<Canvas>
+			<ThreeElement />
+		</Canvas>
 	)
 }
 
