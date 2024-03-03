@@ -19,7 +19,7 @@ function App() {
 				near: 1,
 				far: 100, // 멀리 있는 것 까지 렌더링 할 수치
 				fov: 75,
-				position: [5, 5, 0],
+				position: [5, 5, 5],
 			}}
 		>
 			<color attach="background" args={[color.value]} />
