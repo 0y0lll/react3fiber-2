@@ -1,8 +1,8 @@
 import { Canvas } from '@react-three/fiber'
 import './App.css'
-import { LightElement } from './LightElement'
 import { OrbitControls } from '@react-three/drei'
 import { useControls } from 'leva'
+import { InteractionElement } from './InteractionElement'
 
 function App() {
 	const color = useControls({
@@ -28,7 +28,7 @@ function App() {
 			<axesHelper args={[5]} />
 			<gridHelper args={[20, grid.segment]} />
 
-			<LightElement />
+			<InteractionElement />
 		</Canvas>
 	)
 }
