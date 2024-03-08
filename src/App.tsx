@@ -1,12 +1,12 @@
-import { Canvas } from "@react-three/fiber"
-import "./App.css"
-import { ThreeElement } from "./ThreeElement"
-import { OrbitControls } from "@react-three/drei"
-import { useControls } from "leva"
+import { Canvas } from '@react-three/fiber'
+import './App.css'
+import { LightElement } from './LightElement'
+import { OrbitControls } from '@react-three/drei'
+import { useControls } from 'leva'
 
 function App() {
 	const color = useControls({
-		value: "#9ec7ce",
+		value: '#9ec7ce',
 	})
 
 	const grid = useControls({
@@ -15,6 +15,7 @@ function App() {
 
 	return (
 		<Canvas
+			shadows
 			camera={{
 				near: 1,
 				far: 100, // 멀리 있는 것 까지 렌더링 할 수치
@@ -26,7 +27,8 @@ function App() {
 			<OrbitControls />
 			<axesHelper args={[5]} />
 			<gridHelper args={[20, grid.segment]} />
-			<ThreeElement />
+
+			<LightElement />
 		</Canvas>
 	)
 }
